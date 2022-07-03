@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(cors(origin: "http://localhost:3000"));
+app.use(cors({origin: "http://localhost:3000"}));
 app.use(router);
 
 io.on("connect", (socket) => {
